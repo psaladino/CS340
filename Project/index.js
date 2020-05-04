@@ -19,12 +19,16 @@ app.get('/about', function(req, res) {
     res.render('about');
 });
 
-app.get('/services', function(req, res) {
-    res.render('services');
+app.get('/certs', function(req, res) {
+    res.render('certs');
 });
 
-app.get('/reviews', function(req, res) {
-    res.render('reviews');
+app.get('/tools', function(req, res) {
+    res.render('tools');
+});
+
+app.get('/employees', function(req, res) {
+    res.render('employees');
 });
 
 app.use(function(req,res){

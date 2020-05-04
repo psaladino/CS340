@@ -8,7 +8,7 @@
 
 body, html {
     height: 90%;
-    background-image: url("./images/background.jpg");
+    background-color: var(--light);
 }
 
 .navbar {
@@ -41,18 +41,18 @@ body, html {
 }
 
 .display-2 {
-    background-color: var(--info);
+    background-color: var(--light);
     padding: 10px;
     font-size: 30px;
     text-align: center;
 }
 
 .aboutCol {
-    background-color: var(--info);
+    background-color: var(--light);
 }
 
 .contactCol{
-    background-color: var(--secondary);
+    background-color: var(--light);
 }
 
 .paragraph {
@@ -60,7 +60,7 @@ body, html {
 }
 
 
-.carousel-item img{
+.homeLogo-item img{
 margin: auto;    
 width: 40%;
 height: 40%;
@@ -84,14 +84,6 @@ height: 40%;
     text-align: center;
 }
 
-.reviews {
-    padding-top: 20px;
-    margin: auto;
-    width: 60%;
-    height: 85%;
-    overflow : -moz-scrollbars-vertical;
-    overflow-y : scroll; 
-}
 
 .form-group {
 
