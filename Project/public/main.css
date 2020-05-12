@@ -102,8 +102,8 @@ float: left;
     
 animation: rotation 12s infinite linear;
 margin: auto;
-height: 60%;
-width: 60%;
+height: 50%;
+width: 50%;
 }
 
 @keyframes rotation {
