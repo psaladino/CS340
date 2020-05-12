@@ -94,23 +94,21 @@ vertical-align: baseline;
 padding-right: 20px;
 }
 
-.price img{
-float: left;
-}
 
-.rotate{
-    
-animation: rotation 12s infinite linear;
-margin: auto;
-height: 50%;
-width: 50%;
+.rounded-circle{   
+display: block;
+margin-left: auto;
+margin-right: auto;
+animation: rotation 18s infinite linear;
+height: 40%;
+width: 40%;
 }
 
 @keyframes rotation {
     from{
-        transform: rotate(0deg);
+    transform: rotate(0deg);
     }
     to{
-        transform: rotate(359deg);
+    transform: rotate(359deg);
     }
 }
