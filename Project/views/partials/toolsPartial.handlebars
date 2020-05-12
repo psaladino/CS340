@@ -5,32 +5,36 @@
 
 <form>
  <fieldset>
-  <legend>Tool information:</legend>
-  <label>Tool ID</label>
-  <input type="text"><br><br>
-  <label>Tool Group</label>
-  <input type="text"><br><br>
-  <input type="submit" value="Submit">
+  <legend><h3>Tool information:</h3></legend>
+  <input type="text" id="inlineFormInput" placeholder="Tool ID">
+  <input type="text" id="inlineFormInput" placeholder="Tool Group">
+  <input class="btn btn-info" type="submit" value="Submit">
  </fieldset>
 </form>
-<br><br>
+<br/>
+<br/>
+
+
 <table>
-  <tr>
-    <th>ID</th>
-    <th>Tool ID</th>
-    <th>Tool Group</th>
-   
-  </tr>
-  <tr>
-  	<td>1</td>
-    <td>Machine A</td>>    
-    <td><input type="submit" value="delete"></td>
-   
-  </tr>
-    <tr>
-  	<td>2</td>
-    <td>Machine B</td>>    
-    <td><input type="submit" value="delete"></td>
-   
-  </tr>
-</table>
+    <thead> 
+        <th>ID</th> 
+        <th>ToolID</th>
+        <th>ToolGroup</th> 
+    </thead> 
+      <tbody>
+        <tr>
+          <td>1</td>  
+          <td>Machine A</td>
+          <td>Goup 1</td> 
+          <td><button type="button" class="btn btn-danger">Delete</button></td>
+        </tr> 
+        <tr>
+          <td>2</td>  
+          <td>Machine B</td>
+          <td>Goup 2</td> 
+          <td><button type="button" class="btn btn-danger">Delete</button></td>
+        </tr>   
+      </tbody>
+</table> 
+
+

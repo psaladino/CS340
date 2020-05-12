@@ -3,7 +3,8 @@
     --info:          #17a2b8;
     --secondary:     #6c757d;
     --success:       #28a745;
- 
+    --warning:       #ffc107;
+    --danger:        #dc3545;
 }
 
 body, html {
@@ -49,6 +50,11 @@ body, html {
 
 .aboutCol {
     background-color: var(--light);
+}
+
+.Managecert {
+    background-color: var(--light);
+    text-align: left;
 }
 
 .contactCol{
