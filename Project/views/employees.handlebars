@@ -1,2 +1,21 @@
 {{> navbar}}
-{{> employeesPartial}}
+
+<h3>Current people:</h3>
+<table id="Employees">
+    <thead> 
+        <th>Employee ID</th> 
+        <th>First Name</th> 
+        <th>Last Name</th> 
+        <th>Email</th>
+    </thead> 
+    <tbody>
+        {{#each Employees}} 
+        <tr>
+            <td>{{this.userID}}</td> 
+            <td>{{this.firstName}}</td> 
+            <td>{{this.lastName}}</td> 
+            <td>{{this.email}}</td> 
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 

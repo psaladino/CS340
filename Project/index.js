@@ -1,20 +1,30 @@
+
 var express = require('express');
 var mysql = require('./dbcon.js');
 var bodyParser = require('body-parser');
 
 var path = require('path');
+
 var app = express();
+var handlebars = require('express-handlebars').create({
+    defaultLayout:'main'});
 
-var handlebars = require('express-handlebars').create({defaultLayout:'main'});
-
-app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', handlebars.engine);
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.set('view engine', 'handlebars');
 app.set('port', 9810);
+app.set('mysql', mysql);
 
 app.get('/', function(req, res) {
     res.render('home');
 });
+
+
+app.use('/employees', require('./employees.js'));
+
+
 
 app.get('/about', function(req, res) {
     res.render('about');
@@ -28,9 +38,6 @@ app.get('/tools', function(req, res) {
     res.render('tools');
 });
 
-app.get('/employees', function(req, res) {
-    res.render('employees');
-});
 
 app.use(function(req,res){
     res.status(404);
