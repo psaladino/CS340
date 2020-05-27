@@ -1,7 +1,7 @@
 {{> navbar}}
 
-<h3>Current people:</h3>
-<table id="Employees">
+<h3>Current Employees:</h3>
+<table id="employees">
     <thead> 
         <th>Employee ID</th> 
         <th>First Name</th> 
@@ -9,7 +9,7 @@
         <th>Email</th>
     </thead> 
     <tbody>
-        {{#each Employees}} 
+        {{#each employees}} 
         <tr>
             <td>{{this.userID}}</td> 
             <td>{{this.firstName}}</td> 
