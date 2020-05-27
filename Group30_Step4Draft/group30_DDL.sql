@@ -5,19 +5,20 @@ userID int(11) NOT NULL AUTO_INCREMENT,
 firstName varchar(255) NOT NULL,
 lastName varchar(255) NOT NULL,
 email varchar(255) NOT NULL,
-PRIMARY KEY (userID),
+PRIMARY KEY (userID)
 );
 
-INSERT INTO `employee` (`userID`, `firstName`, `lastName`,`email` ) VALUES
+INSERT INTO `employees` (`userID`, `firstName`, `lastName`,`email` ) VALUES
 (1, 'Arman', 'Askari Zadeh','Arman@example.com'),
 (2, 'Pierre', 'Saladino','Pierre@example.com');
 
 
 #employee_type that specifies that they are manager or employee
 CREATE TABLE `employee_types` (
-userID int PRIMARY KEY not null,
+userID int NOT NULL,
 type varchar(255) NOT NULL,
-foreign key (userID) references employee(id),
+primary key(userID),
+foreign key (userID) references employees(userID)
 );
 
 
@@ -26,7 +27,7 @@ toolID int(11) NOT NULL AUTO_INCREMENT,
 certID int(11) NOT NULL,
 toolGroup varchar(255) NOT NULL,
 UNIQUE (toolID),
-PRIMARY KEY (toolID),
+PRIMARY KEY (toolID)
 );
 
 INSERT INTO `tools` (`toolID`, `toolGroup`) VALUES
@@ -36,13 +37,13 @@ INSERT INTO `tools` (`toolID`, `toolGroup`) VALUES
 CREATE TABLE `Employee_Certifications` (
 certID int(11) NOT NULL,
 certTitle varchar(255) NOT NULL,
-PRIMARY KEY (certID),
+PRIMARY KEY (certID)
 );
 
-create table 'userID_Certs'(
-userID int(11) not null,
-certID int(11) not null,
+CREATE TABLE `thetable`(
+userID int(11) NOT NULL,
+certID int(11) NOT NULL,
 primary key(userID,certID),
-foreign key (userID) references employee(id),
-foreign key (certID) references project(id)
+foreign key (userID) references employees(userID),
+foreign key (certID) references Employee_Certifications(certID)
 );
