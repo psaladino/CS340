@@ -19,3 +19,11 @@
         {{/each}} 
     </tbody> 
 </table> 
+
+<h1>Update {{employees.firstName}} {{employees.lastName}}:</h1>
+<form id="update-employees" action="/people" method="post">
+    First name: <input type="text" name="firstName" value="{{employees.firstName}}"><br>
+    Last name: <input type="text" name="lastName" value="{{employees.lastName}}"><br>
+    Email: <input type="text" name="email" value="{{employees.email}}"><br>
+</form>
+<button onclick="updateemployees({{employees.id}})">Update</button>
