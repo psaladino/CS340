@@ -1,0 +1,114 @@
+:root {
+    --light:         #ffffff;
+    --info:          #17a2b8;
+    --secondary:     #6c757d;
+    --success:       #28a745;
+    --warning:       #ffc107;
+    --danger:        #dc3545;
+}
+
+body, html {
+    height: 90%;
+    background-color: var(--light);
+}
+
+.navbar {
+    background-color: var(--blue);   
+}
+
+
+.caption {
+    background-color: linear-gradient(var(--grey), var(--blue));
+    position: bottom;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+
+.caption span.border {
+    height: 100%;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 17px;
+    letter-spacing: 8px;
+}
+
+.display-1 {
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.display-2 {
+    background-color: var(--light);
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.aboutCol {
+    background-color: var(--light);
+}
+
+.Managecert {
+    background-color: var(--light);
+    text-align: left;
+}
+
+.contactCol{
+    background-color: var(--light);
+}
+
+.paragraph {
+    text-align: center;
+}
+
+
+.icon {
+    display: block;
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.icon:hover {
+    opacity: 0.4;
+}
+
+.container {
+    list-style-type: none;
+    text-align: center;
+}
+
+
+.form-group {
+
+float: right;    
+text-align: left;
+width: 60%;
+vertical-align: baseline;
+padding-right: 20px;
+}
+
+
+.rounded-circle{   
+display: block;
+margin-left: auto;
+margin-right: auto;
+animation: rotation 18s infinite linear;
+height: 40%;
+width: 40%;
+}
+
+@keyframes rotation {
+    from{
+    transform: rotate(0deg);
+    }
+    to{
+    transform: rotate(359deg);
+    }
+}

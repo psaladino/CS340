@@ -1,0 +1,29 @@
+{{> navbar}}
+
+<h3>Current Employees:</h3>
+<table id="employees">
+    <thead> 
+        <th>Employee ID</th> 
+        <th>First Name</th> 
+        <th>Last Name</th> 
+        <th>Email</th>
+    </thead> 
+    <tbody>
+        {{#each employees}} 
+        <tr>
+            <td>{{this.userID}}</td> 
+            <td>{{this.firstName}}</td> 
+            <td>{{this.lastName}}</td> 
+            <td>{{this.email}}</td> 
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 
+
+<h1>Update {{employees.firstName}} {{employees.lastName}}:</h1>
+<form id="update-employees" action="/people" method="post">
+    First name: <input type="text" name="firstName" value="{{employees.firstName}}"><br>
+    Last name: <input type="text" name="lastName" value="{{employees.lastName}}"><br>
+    Email: <input type="text" name="email" value="{{employees.email}}"><br>
+</form>
+<button onclick="updateemployees({{employees.id}})">Update</button>
