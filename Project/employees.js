@@ -4,7 +4,7 @@ module.exports = function(){
 
     function getEmployees(req, res){
         console.log("Get Employees from db table")
-        var query = 'SELECT * FROM Employees';
+        var query = 'SELECT * FROM employees';
         var mysql = req.app.get('mysql');
         var context = {};
    
