@@ -25,7 +25,7 @@ app.get('/', function(req, res) {
 
 app.use('/employees', require('./employees.js'));
 
-
+app.use('/tools', require('./tools.js'));
 
 app.get('/about', function(req, res) {
     res.render('about');
@@ -33,10 +33,6 @@ app.get('/about', function(req, res) {
 
 app.get('/certs', function(req, res) {
     res.render('certs');
-});
-
-app.get('/tools', function(req, res) {
-    res.render('tools');
 });
 
 

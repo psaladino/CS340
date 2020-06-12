@@ -2,30 +2,31 @@ module.exports = function(){
     var express = require('express');
     var router = express.Router();
 
-    function getEmployees(req, res){
-        console.log("Get Employees from db table")
-        var query = 'SELECT * FROM employees';
+    function getTools(req, res){
+        console.log("Get Tools from db table")
+        var query = 'SELECT * FROM tools';
         var mysql = req.app.get('mysql');
         var context = {};
    
-        function handleGettingEmployees(error, results, fields){
+        function handleGettingTools(error, results, fields){
             console.log(error)
             console.log(results)
             console.log(fields)
             //take the results of that query and store ti inside context
-            context.employees = results;
+            context.tools = results;
             //pass it to handlebars to put inside a file
-            res.render('employees', context)
+            res.render('tools', context)
           }
           //execute the sql query
-          mysql.pool.query(query, handleGettingEmployees)
+          mysql.pool.query(query, handleGettingTools)
   
           //res.send('Here you go!');
       }
 
       
-        router.get('/', getEmployees);
+        router.get('/', getTools);
 
-   
+     
+    
     return router;
 }();

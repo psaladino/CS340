@@ -1,2 +1,56 @@
 {{> navbar}}
-{{> toolsPartial}}
+
+
+{{!-- <h3>Current Employees:</h3>
+<table id="employees">
+    <thead> 
+        <th>Employee ID</th> 
+        <th>First Name</th> 
+        <th>Last Name</th> 
+        <th>Email</th>
+    </thead> 
+    <tbody>
+        {{#each employees}} 
+        <tr>
+            <td>{{this.userID}}</td> 
+            <td>{{this.firstName}}</td> 
+            <td>{{this.lastName}}</td> 
+            <td>{{this.email}}</td> 
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table>  --}}
+
+<div class="display-2">
+  <h1>Add or Delete Tools</h1>
+    </div>
+
+<form>
+ <fieldset>
+  <legend><h3>Tool information:</h3></legend>
+  <input type="text" id="inlineFormInput" placeholder="Tool ID">
+  <input type="text" id="inlineFormInput" placeholder="Tool Group">
+  <input class="btn btn-info" type="submit" value="Submit">
+ </fieldset>
+</form>
+<br/>
+<br/>
+
+<h3>Current Tools:</h3>
+<table id="tools">
+    <thead> 
+        <th>ToolID</th>
+        <th>ToolGroup</th> 
+    </thead> 
+      <tbody>
+         {{#each tools}} 
+        <tr>
+          <td>{{this.toolID}}</td>
+          <td>{{this.certID}}</td>
+          <td>{{this.toolGroup}}</td> 
+          <td><button type="button" class="btn btn-danger">Delete</button></td>
+        </tr> 
+        {{/each}} 
+      </tbody>
+      
+</table> 
